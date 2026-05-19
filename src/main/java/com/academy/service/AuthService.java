@@ -1,7 +1,9 @@
 package com.academy.service;
 
+import com.academy.model.Role;
 import com.academy.model.User;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AuthService {
@@ -11,8 +13,10 @@ public class AuthService {
   public AuthService() {
     users = new ArrayList<User>();
 
-    User user1 = new User("Ivan", "qwert");
-    User user2 = new User("John", "qwert");
+    Role admin = new Role("ADMIN");
+    Role customer = new Role("CUSTOMER");
+    User user1 = new User("Ivan", "qwert", Collections.singletonList(admin));
+    User user2 = new User("John", "qwert", Collections.singletonList(customer));
 
     users.add(user1);
     users.add(user2);

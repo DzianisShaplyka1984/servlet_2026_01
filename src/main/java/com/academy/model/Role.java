@@ -1,6 +1,5 @@
 package com.academy.model;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,8 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-  private String login;
-  private String password;
-  private List<Role> roles;
+public class Role {
+  private String role;
 }

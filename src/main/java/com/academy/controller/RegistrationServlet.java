@@ -1,5 +1,6 @@
 package com.academy.controller;
 
+import com.academy.model.Role;
 import com.academy.model.User;
 import com.academy.service.AuthService;
 import jakarta.servlet.ServletException;
@@ -10,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Collections;
 
 public class RegistrationServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -44,7 +46,7 @@ public class RegistrationServlet extends HttpServlet {
     String login = credentials[0].split("=")[1];
     String password = credentials[1].split("=")[1];
 
-    User user = new User(login, password);
+    User user = new User(login, password, Collections.singletonList(new Role("CUSTOMER")));
 
     AuthService.getInstance().save(user);
 

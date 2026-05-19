@@ -1,15 +1,18 @@
 package com.academy.controller;
 
+import com.academy.model.Role;
+import com.academy.model.User;
 import com.academy.service.AuthService;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Collections;
 
 public class LoginServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,19 +56,20 @@ public class LoginServlet extends HttpServlet {
     writer.write("</head>");
     writer.write("<body>");
 
-    Cookie cookie;
-
     if (isExists) {
       writer.write("User exist");
 
-      cookie = new Cookie("exist", "true");
+      User user = new User(login, password, Collections.singletonList(new Role("CUSTOMER")));
+
+      HttpSession httpSession = request.getSession();
+
+      httpSession.setAttribute("user", user);
+
     } else {
       writer.write("User not exist");
 
-      cookie = new Cookie("exist", "false");
     }
 
-    response.addCookie(cookie);
     writer.write("</body>");
     writer.write("</html>");
     writer.close();

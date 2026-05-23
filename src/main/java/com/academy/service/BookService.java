@@ -12,9 +12,9 @@ public class BookService {
 
     Book book = new Book(1, "Title1", 1000);
     Book book1 = new Book(2, "Title2", 1001);
-    Book book2 = new Book(3, "Title3", 1002);
-    Book book3 = new Book(4, "Title4", 1003);
-    Book book4 = new Book(5, "Title5", 1004);
+    Book book2 = new Book(3, "Title3", 2010);
+    Book book3 = new Book(4, "Title4", 2010);
+    Book book4 = new Book(5, "Title5", 2020);
 
     books.add(book);
     books.add(book1);

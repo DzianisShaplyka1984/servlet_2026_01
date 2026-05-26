@@ -11,7 +11,7 @@
     <title>Books</title>
   </head>
   <body>
-    <h1>List Books</h1>
+    <h1>List of Books</h1>
 
     <c:set var="greeting" value="${sessionScope.message}"></c:set>
     ${sessionScope.user.login}

@@ -23,7 +23,7 @@
 
     <br>
 
-    <c:forEach items="${books_new}" var="book">
+    <c:forEach items="${books}" var="book">
       ${book.title}
 
 

@@ -27,7 +27,7 @@ public class BookServlet extends HttpServlet {
       out.println("</head>");
       out.println("<body>");
       out.println(
-          "<h1>Book with id: " + book.getId() + " title: " + book.getTitle() + " year: "
+          "<h1>Book with data id: " + book.getId() + " title: " + book.getTitle() + " year: "
               + book.getYear() + "</h1>");
       out.println("<label>(c) 2026</label>");
       out.println("</body>");

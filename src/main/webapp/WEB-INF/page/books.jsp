@@ -32,7 +32,7 @@
           антиквариант
         </c:when>
         <c:otherwise>
-          эта новая книга
+          новая книга
         </c:otherwise>
       </c:choose>
     <br>

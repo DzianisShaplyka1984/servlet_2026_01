@@ -8,7 +8,7 @@
 
 <html>
   <head>
-    <title>New Login Page</title>
+    <title>Login Page</title>
   </head>
   <body>
     <h1>Login </h1>

@@ -11,8 +11,11 @@
     <title>Login Page</title>
   </head>
   <body>
-    <h1>Login</h1>
-
-
+    <h1>Login </h1>
+    <form method="post" action="/login">;
+      <label>Login: </label> <input name="login"/><br>
+      <label>Password: </label> <input name="password"/><br>
+      <input type="submit" value="Login"/>
+    </form>
   </body>
 </html>

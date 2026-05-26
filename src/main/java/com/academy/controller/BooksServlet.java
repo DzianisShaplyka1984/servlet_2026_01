@@ -17,7 +17,7 @@ public class BooksServlet extends HttpServlet {
 
       List<Book>  books = bookService.getBooks();
 
-      req.setAttribute("books", books);
+      req.setAttribute("books_new", books);
 
       HttpSession session = req.getSession();
       session.setAttribute("message", "Hello World");

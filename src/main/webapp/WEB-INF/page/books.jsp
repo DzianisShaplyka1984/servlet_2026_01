@@ -23,7 +23,7 @@
 
     <br>
 
-    <c:forEach items="${books}" var="book">
+    <c:forEach items="${books_new}" var="book">
       ${book.title}
 
 
@@ -32,7 +32,7 @@
           антиквариант
         </c:when>
         <c:otherwise>
-          новая книга
+          эта новая книга
         </c:otherwise>
       </c:choose>
     <br>

@@ -36,7 +36,6 @@
         </c:otherwise>
       </c:choose>
     <br>
-    <br>
     </c:forEach>
 
     <label>(c) <%@ include file="time.jsp"%></label>
